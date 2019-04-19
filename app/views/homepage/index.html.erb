@@ -6,19 +6,47 @@
      <meta name="viewport" content="width=device-width, initial-scale=1">
    </head>
    
-    <body>
-      <h1>hello</h1>
+    <body>          
+          
+        <div class="container">
+          <div class="row">    
 
-      <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Dropdown button
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
-  </div>
-</div>
+           <div class="col">
+             <div class="head d-flex  p-3 my-3 bg-theme rounded shadow-sm">
+               <%= image_tag 'source-code.svg', :class=>"mr-3 head-icon"%>
+               <div class="lh-100">
+                 <h2 class="mb-0 lh-100"> Projects </h2>
+                 <small>2016 - Current</small>
+               </div>
+             </div>
+     
+     
+             <div class="my-3 p-3 rounded shadow-sm">
+               <h6 class="border-bottom border-gray pb-2 mb-0">Completed Projects</h6>
+                 <%= render 'completed_projects' %>                 
+            
+             </div>
+     
+     
+             <div class="my-3 p-3 rounded shadow-sm">
+               <h6 class="border-bottom border-gray pb-2 mb-0">All Current Projects</h6>
+                 <%= render 'current_projects' %>        
+             </div>
+           </div>      
+
+          </div>
+        </div>
+
+
     </body>
 </html>
 
+
+
+<!--
+  ## table footer links ##
+  <small class="d-block text-right mt-3">
+    <a href="#"> All current projects</a>
+  </small>
+
+ -->
