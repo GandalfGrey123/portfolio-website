@@ -1,4 +1,4 @@
-<% Project.where(completed: false).each do |project| %>
+<% @current_projects.each do |project| %>
     <div class="media text-muted pt-3">
      <%= image_tag 'source-code.svg', :class=>"mr-3 table-icon"%>
       <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
