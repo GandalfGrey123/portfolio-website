@@ -1,5 +1,18 @@
 @import 'bootstrap';
 
+.modal-header{
+  font-family:  Arial, Helvetica, sans-serif;
+}
+
+.intro-text{
+  font-size:18px;  
+}
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+
 .hidden-anchor {  
     top: -100px;
     background-color:'red';
