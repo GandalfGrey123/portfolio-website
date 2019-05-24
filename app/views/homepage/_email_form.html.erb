@@ -1,83 +1,73 @@
+<%= form_with model: @homepage, local: true do |form| %>
 
-              <form>
+ 
+  <div class="form-group">
+     <label for="exampleFormControlInput1">Email address</label>
+     <input type="email" class="form-control " name="email" placeholder="name@example.com">
+  </div>
+      
+  <div class="form-row">
+     <div class="form-group col-md-6">
+       <label for="inputEmail">Names (Optional) </label>
+       <input type="text" name="firstName" class="form-control" placeholder="Firstname">
+     </div>
 
-
-              <div class="form-group">
-                <label for="exampleFormControlInput1">Email address</label>
-                <input type="email" class="form-control " id="exampleFormControlInput1" placeholder="name@example.com">
-              </div>
-
-           <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="inputEmail4">Names (Optional) </label>
-      <input type="text" class="form-control" id="inputEmail4" placeholder="Firstname">
-    </div>
-    <div class="form-group col-md-6">
-      <label for="inputPassword4"> &nbsp;</label>
-      <input type="text" class="form-control" id="inputPassword4" placeholder="Lastname">
-    </div>
+     <div class="form-group col-md-6">
+       <label for="inputPassword"> &nbsp;</label>
+       <input type="text" name="lastName" class="form-control" placeholder="Lastname">
+     </div>
+   </div>
+                     
+    <br>
+      
+  <div class="form-row">
+        <div class="form-group col-md-12">                
+          <label for="inputEmail4"> Subject</label>
+          <input type="text" name="subjectTitle" class="form-control" style="font-size: 20px;" placeholder="Title">                        
+         </div>
+                
+        <div class="form-group col-md-12">              
+          <textarea name="emailBody" placeholder="your message.." class="form-control" rows="6"></textarea>
+        </div>  
   </div>
 
+        <div class="form-group w-50 center-block text-center rounded bg-light p-3">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="agreeChecked" value="false">
+            <label class="form-check-label" for="agreeChecked" > 
+               Must Agree to 
+               <span> 
+                <a href="" data-toggle="modal" data-target="#agreeTermsModal">
+                  Terms and Conditions
+                </a>
+               </span>
+             </label>     
+           </div>
+        </div>   
 
-<br>
-          <div class="form-row">
-          <div class="form-group col-md-10">                
-             <label for="inputEmail4">  Email</label>
-                <input type="email" class="form-control " style="font-size: 20px;" id="exampleFormControlInput1" placeholder="Title">
-              </div>
-          </div>
-           
-             
-              <div class="form-group">
-              
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="6"></textarea>
-              </div>
+    <input name="clientIp" style="display: none" class="form-control" placeholder=<%= request.remote_ip %>>
+    <button type="submit" class="btn btn-secondary w-100">Send Email</button>
+<% end %>
 
-        <div class="form-group">
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" id="gridCheck">
-      <label class="form-check-label" for="gridCheck">
-        Agree to 
-       
-       <span> 
-          <a href="#" data-toggle="modal" data-target="#agreeTermsModal">terms and conditions</a>       
-       </span>
-
-      </label>
-
-       <div class="modal fade " tabindex="-1" role="dialog" aria-labelledby="agreeTermsModal" aria-hidden="true" id="agreeTermsModal">
+        <div class="modal fade " tabindex="-1" role="dialog" aria-labelledby="agreeTermsModal" aria-hidden="true" id="agreeTermsModal">
          <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLongTitle">Terms and       conditions </h5>
-              <button type="button" class="close" data-dismiss="modal"       aria-label="Close">
+              <h5>Terms and conditions </h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
             <div class="modal-body">
-              <% 'agree' %>
+              <%= 'agree' %>
             </div>
             <div class="modal-footer">
            
-              <button type="button" class="btn btn-primary">Agree</button>
+              <button type="submit" for="emailForm" class="btn btn-primary">I Agree</button>
             </div>
           </div>
           </div>
         </div>
-</div>
-
-     <%= user_ip = request.remote_ip %>
-      <p>
-      create hidden field for ip to be submitted with form <% user_ip %>
-      </p>
-          
 
 
-    </div>
 
-  </div>
-
-  <button type="button" class="btn bg-light w-100 border">Submit</button>
-
-            </form>
-        </div>
