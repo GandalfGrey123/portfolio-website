@@ -1,0 +1,70 @@
+<div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+      <div class="d-flex justify-content-between align-items-center w-100">
+          <strong class="d-block text-gray-dark"> 
+          <h6> 
+              <a href="#" data-toggle="modal" data-target="#projectModal<%=project.id%>"> 
+              <%= project.title %>     
+
+              </a>
+          </h6>
+        </strong>                        
+      </div>
+  <span class="d-block"> <%= project.description %></span>                    
+</div> 
+
+
+
+<div class="modal-bg-custom modal fade " tabindex="-1" role="dialog" aria-labelledby="projectModal<%=project.id%>" aria-hidden="true" id="projectModal<%=project.id%>">
+
+  <div class="modal-dialog modal-dialog-centered modal-lg " role="document">
+    <div class="project-modal modal-content">
+      <div class="modal-header">
+    
+        <h5 >
+         <%=project.title%>
+        </h5>
+     
+       <button type="button" class="close" data-dismiss="modal" aria-label=  "Close">
+          <span aria-hidden="true">&times;</span>
+       </button>
+    </div>
+
+     <div class="modal-body modal-body-width ">
+      <div class="card">
+        <div class="card-body">      
+          <div class="media">
+          <div class="media-body">         
+
+            <% project.pictures.each do |next_picture| %>
+              <%= image_tag next_picture.data, :class=> "w-100"%>
+            <%end%>
+            
+              <hr>
+                <h5 class="mt-0">Design Summary</h5>
+                <% project.designSummary.split("\n").each do |next_paragraph| %>
+                  <p style="text-indent: 2.0em;">
+                    <%= next_paragraph %>              
+                  </p>
+                <%end%>
+              <hr>
+      
+              <h5 class="mt-0">
+                Project Links
+              </h5>
+              |
+               <% project.links.each do |next_link| %>   
+                <%= link_to next_link.linkName, next_link.linkUrl%> | 
+              <% end%>
+          </div>
+          </div>
+         </div>
+      </div>
+     </div>
+
+    <div class="modal-footer">    
+        <button type="button" class="btn btn-secondary">See Project</button>
+    </div>
+
+    </div>
+  </div>
+</div>

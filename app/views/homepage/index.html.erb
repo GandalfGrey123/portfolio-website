@@ -3,34 +3,170 @@
    <head>
      <title> Marcus </title>
      <meta charset="utf-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1">
+
    </head>
    
-    <body>          
-          
-        <div class="container">
-          <div class="row">    
+    <body class="font-thin"> 
 
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col">
+            <div class="jumbotron jumbotron-fluid  bg-light text-center">
+              <div class="container">
+                    <img src="https://image.flaticon.com/icons/png/512/145/145863.png" class="hover-shadow avatar mr-3" alt=".$$.">
+                    <div class="mt-4">
+                    <h2 class="display-4 f-weight-thin">Marcus &nbsp; Wong</h2>
+                    S o f t w a r e &nbsp; E n g i n e e r 
+                    </div>
+              </div>
+                        
+              <ul class="nav justify-content-end">        
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="#">version 1.0  2019</a>
+                </li>
+              </ul>   
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="border mb-5 container">
+         <div class="row">
            <div class="col">
-             <div class="head d-flex  p-3 my-3 bg-theme rounded shadow-sm">
-               <%= image_tag 'source-code.svg', :class=>"mr-3 head-icon"%>
-               <div class="lh-100">
-                 <h2 class="mb-0 lh-100"> Projects </h2>
-                 <small>2016 - Current</small>
-               </div>
-             </div>
-     
+
+           </div>
+         </div>
+      </div>
+
+ 
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col">
+            <nav class="navbar fixed-top navbar-light bg-light navbar-expand-md">
+
+              <div class="collapse navbar-collapse justify-content-end" id="main-nav-collapse">
+                  <ul class="navbar-nav">
+                      <li id="buttonProjects" class="nav-item active">
+                        <button id="" class="nav-link btn btn-link">Projects</button>
+                      </li>
+
+                      <li id="buttonProfile" class="nav-item">
+                        <button class="nav-link btn btn-link">Profile</button>
+                      </li>
+
+                      <li id="buttonContact" class="nav-item">
+                        <button class="nav-link btn btn-link">Contact</button>
+                      </li>              
+                  </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+        <div id="projectSection" class="container">
+          <div class="row">         
+           <div class="col">
      
              <div class="my-3 p-3 rounded shadow-sm">
-               <h6 class="border-bottom border-gray pb-2 mb-0">Completed Projects</h6>
-                 <%= render 'completed_projects' %>                 
-            
+              <div class="border-bottom border-gray">
+                <h4 class="pb-2 mb-0">Completed Projects </h4>
+                <small>
+                  2016 - Current
+                </small>             
+              </div>
+
+                  <% @completed_projects.each do |project| %>
+              
+                      <div class="media text-muted pt-3">
+                        <%= image_tag "source-code.svg", :class=>"mr-3 table-icon"%>
+                        <%= render :partial => 'project_row', :locals =>{project: project} %>          
+                      </div>
+                  <% end %>                  
+
+                  <div id="accordion">
+  <div class="media text-muted pt-3">
+    
+
+    <i class="fa fa-angle-right mr-3 table-icon"></i>
+  <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+
+    <div class="" id="headingCompleted">
+
+      <div class="d-flex justify-content-between align-items-center w-100">
+          <strong class="d-block text-gray-dark"> 
+
+             <button class="hover-shadow btn btn-linkcollapsed" data-toggle="collapse" data-target="#collapseMoreCompleted" aria-expanded="false" aria-controls="collapseMoreCompleted">
+           More projects
+        </button>
+          </strong>                        
+        </div>
+       
+   
+    </div>
+    <div id="collapseMoreCompleted" class="collapse" aria-labelledby="headingCompleted" data-parent="#accordion">
+      <div class="card-body">
+          <%= render :partial => 'acordion_projects', :locals => {projectList:["goodbye","world"] } %> 
+
+      </div>
+    </div>
+  </div>
+  </div>    
+ </div>
+
+
+
              </div>
-     
-     
+
+
+      <div class="border mb-5 container">
+         <div class="row">
+           <div class="col">
+
+           </div>
+         </div>
+      </div>
+
              <div class="my-3 p-3 rounded shadow-sm">
-               <h6 class="border-bottom border-gray pb-2 mb-0">All Current Projects</h6>
-                 <%= render 'current_projects' %>        
+               <h4 class="border-bottom border-gray pb-2 mb-0">All Current Projects</h4>
+                
+               <% @current_projects.each do |project| %>
+              
+                 <div class="media text-muted pt-3">
+                   <%= image_tag "source-code.svg", :class=>"mr-3 table-icon"%>
+                   <%= render :partial => 'project_row', :locals =>{project: project} %>          
+                 </div>
+              <% end %>  
+                         <div id="accordion">
+  <div class="media text-muted pt-3">
+    
+
+    <i class="fa fa-angle-right mr-3 table-icon"></i>
+  <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+
+    <div class="" id="headingCurrent">
+
+      <div class="d-flex justify-content-between align-items-center w-100">
+          <strong class="d-block text-gray-dark"> 
+
+             <button class="hover-shadow btn btn-linkcollapsed" data-toggle="collapse" data-target="#collapseMoreCurrent" aria-expanded="false" aria-controls="collapseMoreCurrent">
+           More projects
+        </button>
+          </strong>                        
+        </div>
+       
+   
+    </div>
+    <div id="collapseMoreCurrent" class="collapse" aria-labelledby="headingCurrent" data-parent="#accordion">
+      <div class="card-body">
+          <%= render :partial => 'acordion_projects', :locals => {projectList:["hello","world"] } %> 
+
+      </div>
+    </div>
+  </div>
+  </div>    
+ </div>
+
              </div>
            </div>      
 
@@ -38,15 +174,252 @@
         </div>
 
 
-    </body>
+    <div class="container">
+        <div class="row">
+
+          <div class=" col-xs-12 col-sm-6 col-md-6 col-lg-6">
+             <div class="card height-200">
+              <div class="card-body theme-secondary text-center">
+
+                <h2 class="card-title text-center "> Main Skills</h2>
+                   <hr class="col-2">
+
+                <div class="media-body pb-3 mb-0 small border-bottom border-gray">
+                    <br><h6> Programming Languages:   </h6>
+                    <span class="d-block"> 
+                      <% [" Ruby "].each do |skill|%>
+                        <%= skill%>
+                      <% end %> 
+                    </span>                    
+                 </div> 
+
+                 <div class="media-body pb-3 mb-0 small border-bottom border-gray">
+                    <br><h6> Focus: </h6>
+                    <span class="d-block">   
+                      <% [" Web Development "," Computer Networks ", "Object Oriented Analysis"].each do |skill|%>                      
+                        <%= skill%><br>
+                      <% end %> 
+                    </span>                    
+                 </div> 
+
+                  <div class="media-body pb-3 mb-0 small border-bottom border-gray">
+                    <br><h6> Other Tools OS/Frameworks: </h6>
+                    <span class="d-block">
+                       <% ["Bash script Unix", "BootStrap HTML / CSS" ,"Linux", "Windows Server2012 GFI VmWare ESXi"].each do |skill|%>
+                          <%= skill%> <br>
+                       <% end %>
+                    </span>                    
+                  </div> 
+                   
+              </div>
+             </div>
+          </div>
+
+          <div class=" col-xs-12 col-sm-6 col-md-6 col-lg-6">
+             <div class="card height-200">
+              <div class="card-body theme-secondary text-center">
+
+                <h2 class="card-title text-center "> Other Skills</h2>
+                   <hr class="col-2">
+
+                <div class="media-body pb-3 mb-0 small border-bottom border-gray">
+                    <br><h6> Other Programming Languages:   </h6>
+                    <span class="d-block"> 
+                      <% [" C++ , C" ,"Python3" , " Java , JavaScript "].each do |skill|%>
+                        <%= skill%><br>
+                      <% end %> 
+                    </span>                    
+                 </div> 
+
+                 <div class="media-body pb-3 mb-0 small border-bottom border-gray">
+                    <br><h6> Databases: </h6>
+                    <span class="d-block">   
+                      <% [" MySQL , MongoDB , Sqlite3 "].each do |skill|%>
+                        <%= skill%>
+                      <% end %> 
+                    </span>                    
+                 </div> 
+
+                  <div class="media-body pb-3 mb-0 small border-bottom border-gray">
+                    <br><h6> Other Tools/Frameworks: </h6>
+                    <span class="d-block">
+                       <% ["Rails", "nodeJS , Express , Electron , React", "Mongoose , Sequelize" ,"AWS , Heroku "].each do |skill|%>
+                          <%= skill%><br>
+                       <% end %>
+                    </span>                    
+                  </div> 
+                   
+              </div>
+             </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+<%= render 'border_chunk' %>
+
+
+  <div id="profileSection" class="container mt-4">
+    <div id="profileSection" class="row">
+
+      <div class="col">
+
+        <div class="section-heading text-center">
+              <h2 class="h-bold theme-strong-secondary">Other Profiles</h2>
+              <div class="divider-header"></div>
+            </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+  <div class="container text-center">
+    <div class="row">
+
+      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+        <div class="card" >
+          <div class="card-body theme-secondary">
+            <%= image_tag 'code-signal-icon.jpg', :class=>" card-icon  img-responsive"%>
+            <h5 class="card-title">CodeFights</h5>
+
+            <p class="card-text">
+       View my public CodeFights profile. Mainly Ruby code, you can view algorithms and functional programming challenges completed by me
+            </p>
+            <a href="https://app.codesignal.com/profile/masterbaggins" target="_blank" class="card-link">View CodeFights Profile</a>
+          </div>  
+         </div>
+      </div>
+
+      <div class="col-lg-4 col-md-4 col-sm-12  col-xs-12">
+        <div class="card" >
+  <div class="card-body theme-secondary">
+   
+     <%= image_tag 'github-icon.svg', :class=>" card-icon "%>
+    <h5 class="card-title">Github</h5>
+ 
+     <p class="card-text">
+       View my public CodeFights profile. Mainly Ruby code, you can view algorithms and functional programming challenges completed by me
+    </p>
+
+    <a href="https://github.com/GandalfGrey123" target="_blank" class="card-link ">View Github Profile</a>
+  </div>
+</div>
+      </div>
+
+      <div class="col-lg-4 col-md-4 col-sm-12  col-xs-12">
+        <div class="card ">
+  <div class="card-body theme-secondary">
+     <%= image_tag 'https://image.flaticon.com/icons/svg/179/179319.svg', :class=>" card-icon"%>
+    <h5 class="card-title ">Facebook</h5>
+ 
+   
+     <p class="card-text">
+       View my public CodeFights profile. Mainly Ruby code, you can view algorithms and functional programming challenges completed by me
+    </p>
+
+    <a href="https://www.facebook.com/select.all.sf" target="_blank" class="card-link">Facebook page</a>
+  </div>
+</div>
+      </div>
+
+    </div>
+  </div>
+
+<%= render 'border_chunk' %>
+
+  
+      <div id="contactSection" class="container">
+        <div class="row mt-5"> 
+
+          <div class="col-1">
+          </div>
+
+          <div class="col-10 col-lg-10 col-sm-12">       
+          <div class="card">
+            <div class="card-header bg-light text-center">
+              <h3 class="font-courier"> Send your emails</h3>
+            </div>
+            <div class="card-body">
+              <%= render 'email_form' %>
+            </div>         
+          </div>
+          </div>
+
+          <div class="col-1">
+          </div>        
+        </div>
+      </div> 
+      <nav class="container-fluid p-5 mt-5">
+      <ul class="nav justify-content-end">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">version 1.0</a>
+        </li>
+      </ul>   
+    </nav>
+   </body>
+
+   <script>
+    var activeNavButton = "buttonProjects";
+
+    var buttonProjects = document.getElementById("buttonProjects");
+    buttonProjects.addEventListener("click",() =>{
+      document.getElementById(activeNavButton).classList.remove('active');
+      activeNavButton = "buttonProjects";
+      buttonProjects.classList.add('active');
+
+       document.getElementById("projectSection").scrollIntoView();
+       let y = window.scrollY
+       window.scroll({
+          top: y-100,
+          behavior: 'smooth'
+        });
+
+    });
+
+    var buttonProfile = document.getElementById("buttonProfile");
+    buttonProfile.addEventListener("click",() =>{
+       document.getElementById(activeNavButton).classList.remove('active');
+       activeNavButton = "buttonProfile";
+       buttonProfile.classList.add('active');
+
+       document.getElementById("profileSection").scrollIntoView();
+       let y = window.scrollY
+       window.scroll({
+          top: y-100,
+          behavior: 'smooth'
+        });
+    });
+
+    var buttonContact = document.getElementById("buttonContact");
+    buttonContact.addEventListener("click",() =>{
+      document.getElementById(activeNavButton).classList.remove('active');
+       activeNavButton = "buttonContact";
+       buttonContact.classList.add('active'); 
+
+       document.getElementById("contactSection").scrollIntoView();
+       let y = window.scrollY
+       window.scroll({
+          top: y-100,
+          behavior: 'smooth'
+        });
+
+    });
+
+   </script>
 </html>
 
 
-
-<!--
-  ## table footer links ##
-  <small class="d-block text-right mt-3">
-    <a href="#"> All current projects</a>
-  </small>
-
- -->

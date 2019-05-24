@@ -1,5 +1,61 @@
 @import 'bootstrap';
 
+.hidden-anchor {  
+    top: -100px;
+    background-color:'red';
+    z-index: -1000;
+ }
+
+ .box-lg{
+  max-width:666px;
+ }
+
+ @media (min-width: 992px !important) {
+  .modal-lg {
+    max-width: 666px !important;
+  }
+}
+
+.project-modal{
+  background-color: rgba(242, 242, 242, 0.9);
+}
+
+.modal-bg-custom{
+   background-color: rgba(255, 255, 255, 0.8) !important; 
+}
+
+.f-weight-thin h2{
+  font-weight: 10;
+}
+
+.badge{
+  padding:6px;
+}
+
+.card{
+  overflow: scroll;
+}
+
+.height-200{
+  height:400px;
+}
+
+.display-4 {
+  font-weight: 10;
+}
+
+body a,h1,h2,h3,h4{
+  font-weight: 20;
+}
+
+.bg-white {
+  background-color:white;
+}
+
+.modal{    
+  width:1680px;
+  max-width:75%;
+}
 
 .bg-theme{
  background-color: #4a8e81;
@@ -17,4 +73,53 @@
 .table-icon{
   height:40px;
   width:40px;
+}
+
+.bg-medium-light{
+  background-color:#c3c6cc;
+}
+
+.theme-secondary{
+  color:#848484;
+}
+
+.theme-strong-secondary{
+  color:#666666;
+}
+
+.card-icon{
+  vertical-align: middle;
+  overflow:none;
+  height: 90px;
+  padding:10px;
+  border-radius: 50%;
+}
+
+.avatar {
+  vertical-align: middle;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+
+.navbar-nav > li {
+  float: left;
+  position: relative;
+}
+.navbar-light .navbar-nav .active .btn::after {
+  border-bottom: 5px solid #777a7f;
+  bottom: -10px;
+  content: " ";
+  left: 0;
+  position: absolute;
+  right: 0;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
