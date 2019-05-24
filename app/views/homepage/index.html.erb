@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
    <head>
-     <title> Marcus </title>
      <meta charset="utf-8">
-
    </head>
    
     <body class="font-thin"> 
@@ -30,6 +28,7 @@
         </div>
       </div>
 
+
       <div class="border mb-5 container">
          <div class="row">
            <div class="col">
@@ -37,7 +36,6 @@
            </div>
          </div>
       </div>
-
  
       <div class="container-fluid">
         <div class="row">
@@ -106,7 +104,7 @@
     </div>
     <div id="collapseMoreCompleted" class="collapse" aria-labelledby="headingCompleted" data-parent="#accordion">
       <div class="card-body">
-          <%= render :partial => 'acordion_projects', :locals => {projectList:["goodbye","world"] } %> 
+          <%= render :partial => 'acordion_projects', :locals => {projectList:["Team Project - Java Point of Sales Terminal system with GUI ", "School Project - UNIX Shell clone implemented in C","Personal Project - Rails Forum Web App", "Personal Project - Ruby Signal Server", "Work Project - NAS Data Transfer command line program"]  } %> 
 
       </div>
     </div>
@@ -159,7 +157,7 @@
     </div>
     <div id="collapseMoreCurrent" class="collapse" aria-labelledby="headingCurrent" data-parent="#accordion">
       <div class="card-body">
-          <%= render :partial => 'acordion_projects', :locals => {projectList:["hello","world"] } %> 
+          <%= render :partial => 'acordion_projects', :locals => {projectList:["Work Project -  Ptyhon web interface using ExLibris API for SFSU Library Staff"] } %> 
 
       </div>
     </div>
@@ -357,14 +355,9 @@
       <nav class="container-fluid p-5 mt-5">
       <ul class="nav justify-content-end">
         <li class="nav-item">
-          <a class="nav-link active" href="#">Active</a>
+          <a class="nav-link active" href="#">About Website</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
+
         <li class="nav-item">
           <a class="nav-link disabled" href="#">version 1.0</a>
         </li>
