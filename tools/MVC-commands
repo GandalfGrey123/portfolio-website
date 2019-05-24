@@ -1,0 +1,1 @@
+rails g model ModelName attribute_name:data_type

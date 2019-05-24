@@ -1,0 +1,2 @@
+.schema tableName
+#returns the column names for given tableName

@@ -1,0 +1,35 @@
+CREATE NEW MIGRATION
+rails g migration
+
+
+OTHER MIGRATION COMMANDS
+db:rollback 
+#rolls back the last migration
+
+db:migrate:up 
+#runs one specific migration
+
+db:migrate:down 
+#rolls back one specific migration
+
+db:migrate:status 
+#shows current migration status
+
+db:migrate 
+#runs (single) migrations that have not run yet.
+
+db:create 
+#creates the database
+
+db:drop 
+#deletes the database
+
+db:schema:load
+#creates tables and columns within the (existing) database following schema.rb
+
+db:setup 
+#does db:create, db:schema:load, db:seed
+
+db:reset 
+#does db:drop, db:setup
+
