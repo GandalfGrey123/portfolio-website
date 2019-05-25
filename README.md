@@ -1,5 +1,9 @@
 # README
 
+
+run server on vm:
+rvmsudo rails server -p 80 -b 0.0.0.0
+
 keep server running:
 `screen rails s`
 
