@@ -1,12 +1,5 @@
 # README
 
-
-run server on vm:
-rvmsudo rails server -p 80 -b 0.0.0.0
-
-keep server running:
-`screen rails s`
-
 deploying to server
 
   once pushed to the server run following commands...
@@ -16,12 +9,21 @@ deploying to server
   `rails db:seed` <-- add the static data 
 
   now you are ready to run the server
-  
-  to keep server running:
-  `screen rails s`
 
-  or run server once
-  `rails s` 
+      run server on aws vm:
+      `rvmsudo rails server -p 80 -b 0.0.0.0`
+
+      run serve on aws production mode:
+      `rvmsudo rails server -p 80 -b 0.0.0.0 -e production`
+      `rails s -p 80 -b 0.0.0.0 -e production`
+
+      keep it running forever on aws vm:
+      `rvmsudo rails server -p 80 -b 0.0.0.0 -d`
+      `rvmsudo rails server -p 80 -b 0.0.0.0 -e production -d`
+
+      keep server running (alternative):
+      `screen rails s -b 0.0.0.0`
+
 
 * Ruby version
 	Version 2.6.0
