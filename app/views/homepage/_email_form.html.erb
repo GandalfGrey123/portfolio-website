@@ -1,6 +1,14 @@
 <%= form_with model: @homepage, local: true do |form| %>
+  <% if errors %>
+    <% errors.each do |next_error| %>
+       <div class="alert alert-danger alert-dismissable" role="alert">      
+         <%= next_error%>
+         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+       </div>
+    <% end %>
+  <% end %>
 
- 
   <div class="form-group">
      <label for="exampleFormControlInput1">Email address</label>
      <input type="email" class="form-control " name="email" placeholder="name@example.com">
@@ -18,8 +26,7 @@
      </div>
    </div>
                      
-    <br>
-      
+  <br>
   <div class="form-row">
         <div class="form-group col-md-12">                
           <label for="inputEmail4"> Subject</label>
@@ -31,43 +38,6 @@
         </div>  
   </div>
 
-        <div class="form-group w-50 center-block text-center rounded bg-light p-3">
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="agreeChecked" value="false">
-            <label class="form-check-label" for="agreeChecked" > 
-               Must Agree to 
-               <span> 
-                <a href="" data-toggle="modal" data-target="#agreeTermsModal">
-                  Terms and Conditions
-                </a>
-               </span>
-             </label>     
-           </div>
-        </div>   
-
-    <input name="clientIp" style="display: none" class="form-control" value=<%= request.remote_ip %>>
-    <button type="submit" class="btn btn-secondary w-100">Send Email</button>
+  <input name="clientIp" style="display: none" class="form-control" value=<%= request.remote_ip %>>
+  <button type="submit" class="btn btn-secondary w-100">Send Email</button>
 <% end %>
-
-        <div class="modal fade " tabindex="-1" role="dialog" aria-labelledby="agreeTermsModal" aria-hidden="true" id="agreeTermsModal">
-         <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5>Terms and conditions </h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <%= 'agree' %>
-            </div>
-            <div class="modal-footer">
-           
-              <button type="submit" for="emailForm" class="btn btn-primary">I Agree</button>
-            </div>
-          </div>
-          </div>
-        </div>
-
-
-

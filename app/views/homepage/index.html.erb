@@ -11,7 +11,8 @@
           <div class="col">
             <div class="jumbotron jumbotron-fluid  bg-light text-center">
               <div class="container">
-                    <img src="https://image.flaticon.com/icons/png/512/145/145863.png" class="hover-shadow avatar mr-3" alt=".$$.">
+              
+                    <%= image_tag "profile-pic.png", :class=>"hover-shadow avatar mr-3" %>
                     <div class="mt-4">
                     <h2 class="display-4 f-weight-thin">Marcus &nbsp; Wong</h2>
                     S o f t w a r e &nbsp; E n g i n e e r 
@@ -182,7 +183,7 @@
                 <h2 class="card-title text-center "> Main Skills</h2>
                    <hr class="col-2">
 
-                <div class="media-body pb-3 mb-0 small border-bottom border-gray">
+                <div class="media-body pb-3 mb-0 small border-bottom border-gray text-weak">
                     <br><h6> Programming Languages:   </h6>
                     <span class="d-block"> 
                       <% [" Ruby "].each do |skill|%>
@@ -191,7 +192,7 @@
                     </span>                    
                  </div> 
 
-                 <div class="media-body pb-3 mb-0 small border-bottom border-gray">
+                 <div class="media-body pb-3 mb-0 small border-bottom border-gray text-weak">
                     <br><h6> Focus: </h6>
                     <span class="d-block">   
                       <% [" Web Development "," Computer Networks ", "Object Oriented Analysis"].each do |skill|%>                      
@@ -200,10 +201,10 @@
                     </span>                    
                  </div> 
 
-                  <div class="media-body pb-3 mb-0 small border-bottom border-gray">
+                  <div class="media-body pb-3 mb-0 small border-bottom border-gray text-weak">
                     <br><h6> Other Tools OS/Frameworks: </h6>
                     <span class="d-block">
-                       <% ["Bash script Unix", "BootStrap HTML / CSS" ,"Linux", "Windows Server2012 GFI VmWare ESXi"].each do |skill|%>
+                       <% ["Bash script Unix", "BootStrap HTML / CSS" ].each do |skill|%>
                           <%= skill%> <br>
                        <% end %>
                     </span>                    
@@ -220,7 +221,7 @@
                 <h2 class="card-title text-center "> Other Skills</h2>
                    <hr class="col-2">
 
-                <div class="media-body pb-3 mb-0 small border-bottom border-gray">
+                <div class="media-body pb-3 mb-0 small border-bottom border-gray text-weak">
                     <br><h6> Other Programming Languages:   </h6>
                     <span class="d-block"> 
                       <% [" C++ , C" ,"Python3" , " Java , JavaScript "].each do |skill|%>
@@ -229,7 +230,7 @@
                     </span>                    
                  </div> 
 
-                 <div class="media-body pb-3 mb-0 small border-bottom border-gray">
+                 <div class="media-body pb-3 mb-0 small border-bottom border-gray text-weak">
                     <br><h6> Databases: </h6>
                     <span class="d-block">   
                       <% [" MySQL , MongoDB , Sqlite3 "].each do |skill|%>
@@ -238,10 +239,10 @@
                     </span>                    
                  </div> 
 
-                  <div class="media-body pb-3 mb-0 small border-bottom border-gray">
+                  <div class="media-body pb-3 mb-0 small border-bottom border-gray text-weak">
                     <br><h6> Other Tools/Frameworks: </h6>
                     <span class="d-block">
-                       <% ["Rails", "nodeJS , Express , Electron , React", "Mongoose , Sequelize" ,"AWS , Heroku "].each do |skill|%>
+                       <% ["Rails", "nodeJS , Express , Electron , React", "Mongoose ODM, Sequelize ORM" ,"AWS Basics, Heroku ", "Linux","Windows Server2012, GFI, VmWare ESXi"].each do |skill|%>
                           <%= skill%><br>
                        <% end %>
                     </span>                    
@@ -253,11 +254,7 @@
         </div>
       </div>
 
-
-
-
 <%= render 'border_chunk' %>
-
 
   <div id="profileSection" class="container mt-4">
     <div id="profileSection" class="row">
@@ -273,10 +270,9 @@
     </div>
   </div>
 
+  <hr class="w-20 p-2">
 
-
-
-  <div class="container text-center">
+   <div class="container text-center">
     <div class="row">
 
       <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
@@ -285,9 +281,10 @@
             <%= image_tag 'code-signal-icon.jpg', :class=>" card-icon  img-responsive"%>
             <h5 class="card-title">CodeFights</h5>
 
-            <p class="card-text">
-       View my public CodeFights profile. Mainly Ruby code, you can view algorithms and functional programming challenges completed by me
+            <p class="card-text text-weak">
+              CodeFights is a "skills-based assessment platform". CodeFights has been a good way for me to practice algorithms implementation and analysis as well as practice other languages such as Ruby.
             </p>
+
             <a href="https://app.codesignal.com/profile/masterbaggins" target="_blank" class="card-link">View CodeFights Profile</a>
           </div>  
          </div>
@@ -300,8 +297,8 @@
      <%= image_tag 'github-icon.svg', :class=>" card-icon "%>
     <h5 class="card-title">Github</h5>
  
-     <p class="card-text">
-       View my public CodeFights profile. Mainly Ruby code, you can view algorithms and functional programming challenges completed by me
+     <p class="card-text text-weak">
+      My main GitHub profile is linked here, where you can view my annual project activities and other contributions. There are only a few repositories that I allow to be public on my profile, the rest are private repositories that I frequently contribute to. Feel free to message me about any of the private repos and I will be happy to share with you.
     </p>
 
     <a href="https://github.com/GandalfGrey123" target="_blank" class="card-link ">View Github Profile</a>
@@ -316,11 +313,11 @@
     <h5 class="card-title ">Facebook</h5>
  
    
-     <p class="card-text">
-       View my public CodeFights profile. Mainly Ruby code, you can view algorithms and functional programming challenges completed by me
+     <p class="card-text text-weak">
+      I am also available for contact on FaceBook. I have a public profile here that is accessible to all. Check it out if you would also like to learn more about me!
     </p>
 
-    <a href="https://www.facebook.com/select.all.sf" target="_blank" class="card-link">Facebook page</a>
+    <a href="https://www.facebook.com/select.all.sf" target="_blank" class="card-link">View Facebook page</a>
   </div>
 </div>
       </div>
@@ -343,7 +340,8 @@
               <h3 class="font-courier"> Send your emails</h3>
             </div>
             <div class="card-body">
-              <%= render 'email_form' %>
+              <%= render :partial => 'email_form', :locals =>{errors: @email_error} %>
+               
             </div>         
           </div>
           </div>
@@ -364,6 +362,18 @@
       </ul>   
     </nav>
    </body>
+
+  <% if(@email_error.length != 0) %>
+    <script>
+      alert('Message not sent!');
+       document.getElementById("contactSection").scrollIntoView();
+       let y = window.scrollY
+       window.scroll({
+          top: y-100,
+          behavior: 'smooth'
+        });
+    </script>
+   <% end %>
 
    <script>
     var activeNavButton = "buttonProjects";
@@ -414,5 +424,3 @@
 
    </script>
 </html>
-
-
