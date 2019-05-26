@@ -11,14 +11,12 @@
 
   		    <% if (@show_message.first || @show_message.last) %>
 
-  		       <h6 class="card-subtitle mb-2 text-muted">Your Name: <%= @show_message.first %> <%= @show_message.last %></h6>
+  		       <h6 class="card-subtitle mb-2 text-muted">Your Name: <%= @show_message.first %> &nbsp; <%= @show_message.last %></h6>
   		    <%end%>
 
-  		 
   		    <p class="card-text">
   		    	 <%= @show_message.message %> 
   		    </p>
-
 
   		  </div>
 		</div>
