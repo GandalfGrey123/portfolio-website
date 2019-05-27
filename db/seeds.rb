@@ -32,6 +32,22 @@ def run_seed
 
  	create_project([
  		true,
+ 		"Apartment Rental Website - 2019",		
+		"Fullstack nodeJS Express and React app. Website for finding local apartments with registration and easy contacting system.",
+		"Summary: \nWeb app designed for college students in need of housing. We created this web app to make it easy the process of renting an apartment very simple and quick. \nTools / FrameWorks: \nThis is a fullstack nodeJS application that was deployed to an AWS ec2 instance. For our back end framework and tools we used Express with MySQL and the Sequelize ORM to implement data mapping design. For our front end code we used ReactJs with Google's React library, Material UI. \nMy Contribution: \nDuring this project I acted as one of the main Github masters and did pull request review. My main role in this project was working as a backend and frontend coder. The main contributions that I made to this app was the direct chat messaging system, new listing page and login with authentication",
+ 		[ 
+ 		  ["https://github.com/GandalfGrey123/project-apartment-rental","Github repo - GatorRooms"],
+		  ["https://youtu.be/-Esn45J1gIM","Youtube page - GatorRooms Demo"],
+		  ["https://github.com/GandalfGrey123/project-apartment-rental/blob/master/Milestones/M5/csc648doc.pdf","Project Documentation"]
+		],
+		[
+		  "apartment1.png",
+		  "apartment2.png",
+		]
+	])
+
+ 	create_project([
+ 		true,
  		"PyChat Room - 2019",  	
  		"A chat room program that features multiple client chat rooms.",
  		"Summary: \nThis program was created for users to communicate through internet connection. Users shall be able to create their own chat rooms as well as join others. The goal was to connect multiple users at the same time through chat rooms. The main responsiblities of the server are to handle requests for new chat rooms and incoming messages. \n Tools: \n \tAll connections made to the server were handled using TCP sockets and client requests were monitored using the Python select module.",
@@ -60,21 +76,6 @@ def run_seed
 		]
  	])
 
- 	create_project([
- 		true,
- 		"Apartment Rental Website - 2019",		
-		"Fullstack nodeJS Express and React app. Website for finding local apartments with registration and easy contacting system.",
-		"Summary: \nWeb app designed for college students in need of housing. We created this web app to make it easy the process of renting an apartment very simple and quick. \nTools / FrameWorks: \nThis is a fullstack nodeJS application that was deployed to an AWS ec2 instance. For our back end framework and tools we used Express with MySQL and the Sequelize ORM to implement data mapping design. For our front end code we used ReactJs with Google's React library, Material UI. \nMy Contribution: \nDuring this project I acted as one of the main Github masters and did pull request review. My main role in this project was working as a backend and frontend coder. The main contributions that I made to this app was the direct chat messaging system, new listing page and login with authentication",
- 		[ 
- 		  ["https://github.com/GandalfGrey123/project-apartment-rental","Github repo - GatorRooms"],
-		  ["https://youtu.be/-Esn45J1gIM","Youtube page - GatorRooms Demo"],
-		  ["https://github.com/GandalfGrey123/project-apartment-rental/blob/master/Milestones/M5/csc648doc.pdf","Project Documentation"]
-		],
-		[
-		  "apartment1.png",
-		  "apartment2.png",
-		]
-	])
 
 	create_project([
 		false,
