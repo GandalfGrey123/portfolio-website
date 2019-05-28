@@ -221,10 +221,20 @@
                 <h2 class="card-title text-center "> Other Skills</h2>
                    <hr class="col-2">
 
+
+                <div class="media-body pb-3 mb-0 small border-bottom border-gray text-weak">
+                    <br><h6> Secondary Tools:   </h6>
+                    <span class="d-block"> 
+                      <% ["Java , JavaScript","Rails", "nodeJS , Express , Electron , React"].each do |skill|%>
+                        <%= skill%><br>
+                      <% end %> 
+                    </span>                    
+                 </div> 
+
                 <div class="media-body pb-3 mb-0 small border-bottom border-gray text-weak">
                     <br><h6> Other Programming Languages:   </h6>
                     <span class="d-block"> 
-                      <% [" C++ , C" ,"Python3" , " Java , JavaScript "].each do |skill|%>
+                      <% [" C++ , C" ,"Python3"].each do |skill|%>
                         <%= skill%><br>
                       <% end %> 
                     </span>                    
@@ -242,7 +252,7 @@
                   <div class="media-body pb-3 mb-0 small border-bottom border-gray text-weak">
                     <br><h6> Other Tools/Frameworks: </h6>
                     <span class="d-block">
-                       <% ["Rails", "nodeJS , Express , Electron , React", "Mongoose ODM, Sequelize ORM" ,"AWS Basics, Heroku ", "Linux","Windows Server2012, GFI, VmWare ESXi"].each do |skill|%>
+                       <% ["Mongoose ODM, Sequelize ORM" ,"AWS Basics, Heroku ", "Linux","Windows Server2012, GFI, VmWare ESXi"].each do |skill|%>
                           <%= skill%><br>
                        <% end %>
                     </span>                    

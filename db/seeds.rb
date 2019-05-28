@@ -49,8 +49,8 @@ def run_seed
  	create_project([
  		true,
  		"PyChat Room - 2019",  	
- 		"A chat room program that features multiple client chat rooms.",
- 		"Summary: \nThis program was created for users to communicate through internet connection. Users shall be able to create their own chat rooms as well as join others. The goal was to connect multiple users at the same time through chat rooms. The main responsiblities of the server are to handle requests for new chat rooms and incoming messages. \n Tools: \n \tAll connections made to the server were handled using TCP sockets and client requests were monitored using the Python select module.",
+ 		"A command line chat room program written in Python3",
+ 		"Dev Notes: \n This was a quick 2 week school project for my Computer Networks class, which was suppose to show basic TCP connections and data transfer. As an extra feature I implemented asynchronous IO. I also used subprocessing to host and handle multiple chat rooms. Additionally this was my first Python program. \n Summary: \n Users can connect to their friends and chat simply through their devices' command line interface. Users will able to create their own chat rooms as well as join others. The goal was to connect multiple users at the same time through chat rooms. \n Tools: \n \tAll connections made to the server were handled using TCP sockets and client requests were monitored using the Python select module.",
  		[ 
  		  ["https://github.com/GandalfGrey123/py-chat-room","Github repo - PyChat Program"],
 		  ["https://www.youtube.com/watch?v=sMmpfk4xrHU","Youtube page - PyChat Video Demo"],
@@ -58,7 +58,6 @@ def run_seed
 		[
 		  "chat1.png",
 		  "chat3.png"
-
 		]
  	])
 
