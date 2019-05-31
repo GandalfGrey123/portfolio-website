@@ -5,7 +5,9 @@ deploying to server
   once pushed to the server run following commands...
 
   `bundle install` <-- install gem depedencies
+  
   `rails db:migrate` <-- setup database 
+  
   `rails db:seed` <-- add the static data 
 
   now you are ready to run the server
