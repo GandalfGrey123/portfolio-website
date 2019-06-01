@@ -39,12 +39,12 @@
               <%= image_tag next_picture.data, :class=> "w-100"%>
             <%end%>
 
-                          <h5 class="mt-0">
+              <h5 class="mt-0">
                 Project Links
               </h5>
               |
                <% project.links.each do |next_link| %>   
-                <%= link_to next_link.linkName, next_link.linkUrl%> | 
+                <%= link_to next_link.linkName, next_link.linkUrl, target: :_blank%> | 
               <% end%>
             
               <hr>
