@@ -38,6 +38,14 @@
             <% project.pictures.each do |next_picture| %>
               <%= image_tag next_picture.data, :class=> "w-100"%>
             <%end%>
+
+                          <h5 class="mt-0">
+                Project Links
+              </h5>
+              |
+               <% project.links.each do |next_link| %>   
+                <%= link_to next_link.linkName, next_link.linkUrl%> | 
+              <% end%>
             
               <hr>
                 <h5 class="mt-0">Design Summary</h5>
@@ -48,13 +56,7 @@
                 <%end%>
               <hr>
       
-              <h5 class="mt-0">
-                Project Links
-              </h5>
-              |
-               <% project.links.each do |next_link| %>   
-                <%= link_to next_link.linkName, next_link.linkUrl%> | 
-              <% end%>
+
           </div>
           </div>
          </div>

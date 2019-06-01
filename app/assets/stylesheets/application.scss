@@ -104,10 +104,19 @@ body a,h1,h2,h3,h4{
   color:#666666;
 }
 
+
+.skill-icon{
+  vertical-align: middle;
+  overflow:none;
+  height:70px;
+  padding:10px;
+  border-radius: 50%;
+}
+
 .card-icon{
   vertical-align: middle;
   overflow:none;
-  height: 90px;
+  height: 100px;
   padding:10px;
   border-radius: 50%;
 }
