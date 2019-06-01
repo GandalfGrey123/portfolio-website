@@ -6,10 +6,10 @@
    
     <body class="font-thin"> 
 
-      <div class="container-fluid">
+      <div class="container-fluid ">
         <div class="row">
           <div class="col">
-            <div class="jumbotron jumbotron-fluid  bg-light text-center">
+            <div class="jumbotron jumbotron-fluid bg-light text-center">
               <div class="container">
               
                     <%= image_tag "profile-pic.png", :class=>"hover-shadow avatar mr-3" %>
@@ -19,25 +19,22 @@
                     </div>
               </div>
                         
-              <ul class="nav justify-content-end">        
+                
+              <br><br><br><br>
+               <ul class="nav justify-content-end">        
                 <li class="nav-item">
-                  <a class="nav-link disabled" href="#">version 1.0  2019</a>
+                  <a class="nav-link disabled" href="#">version 1.1  2019</a>
                 </li>
-              </ul>   
+              </ul>
+               <br><br>
             </div>
           </div>
         </div>
       </div>
 
 
-      <div class="border mb-5 container">
-         <div class="row">
-           <div class="col">
 
-           </div>
-         </div>
-      </div>
- 
+
       <div class="container-fluid">
         <div class="row">
           <div class="col">
@@ -63,13 +60,32 @@
         </div>
       </div>
 
-        <div id="projectSection" class="container">
+
+       <div class="mt-5 col-xs-12 col-sm-12 col-lg-12 col-md-12 ">
+             <div class="card border-right-0 border-left-0">
+              <div class="card-body theme-secondary text-center">
+
+        
+
+                <div class="media-body p-4 mb-0 small  border-gray text-weak">
+                    <br>
+                    <span class="d-block"> 
+                      <h2>
+                     Software Projects
+                    </h2>
+                    </span>                    
+                 </div>                   
+              </div>
+             </div>
+          </div>
+
+        <div id="projectSection" class="mt-5 container">
           <div class="row">         
            <div class="col">
      
              <div class="my-3 p-3 rounded shadow-sm">
               <div class="border-bottom border-gray">
-                <h4 class="pb-2 mb-0">Completed Projects </h4>
+                <h3 class="pt-4 pb-4 mb-0">Completed Projects </h3>
                 <small>
                   2016 - Current
                 </small>             
@@ -127,7 +143,7 @@
       </div>
 
              <div class="my-3 p-3 rounded shadow-sm">
-               <h4 class="border-bottom border-gray pb-2 mb-0">All Current Projects</h4>
+               <h3 class="border-bottom border-gray pt-4 pb-4 mb-0">All Current Projects</h3>
                 
                <% @current_projects.each do |project| %>
               
@@ -158,7 +174,7 @@
     </div>
     <div id="collapseMoreCurrent" class="collapse" aria-labelledby="headingCurrent" data-parent="#accordion">
       <div class="card-body">
-          <%= render :partial => 'acordion_projects', :locals => {projectList:["Personal Project - PyChat Refractoring","Work Project -  Ptyhon web interface using ExLibris API for SFSU Library Staff"] } %> 
+          <%= render :partial => 'acordion_projects', :locals => {projectList:["Personal Project - PyChat Refractoring","Work Project -  Python web interface using ExLibris API for SFSU Library Staff"] } %> 
 
       </div>
     </div>
@@ -172,41 +188,108 @@
           </div>
         </div>
 
+       <div class="mt-5 col-xs-12 col-sm-12 col-lg-12 col-md-12 ">
+             <div class="card border-right-0 border-left-0 border-gray">
+              <div class="card-body  theme-secondary text-center">
 
-    <div class="container">
+        
+              <div class="media-body p-4 mb-0 small  text-weak">
+                    <br><h6> </h6>
+                    <span class="d-block"> 
+                      <h3>
+                                          
+                     Github Activity
+                    </h3>
+                    </span>                    
+                 </div>                   
+              </div>
+             </div>
+          </div>
+
+            <div class=" mb-5 mt-5">
+
+        <div class="calendar">
+            <!-- Loading stuff -->
+            Loading Github Data ..
+        </div>
+      </div>
+
+
+
+
+  <div class="mt-5 col-xs-12 col-sm-12 col-lg-12 col-md-12 ">
+             <div class="card border-right-0 border-left-0 border-gray">
+              <div class="card-body  theme-secondary text-center">
+
+        
+              <div class="media-body p-2 mt-5 mb-0 small  text-weak">
+                    <br><h6> </h6>
+                    <span class="d-block"> 
+                      <h1>
+                                          
+                     Skills
+                     <br>                    
+                    </h1>
+
+                    <div class="p-3 mt-2">
+               
+                     <%= image_tag 'beryl-manager.png', :class=>" skill-icon  img-responsive"%>
+                     <%= image_tag '181_Java_logo_logos-256.png', :class=>" skill-icon  img-responsive"%>
+
+                     <%= image_tag 'nodejs-new-pantone-black-256.png', :class=>" skill-icon  img-responsive"%>
+
+                      <%= image_tag '267_Python_logo-512.png', :class=>" skill-icon  img-responsive"%>
+                
+                   </div>
+                    </span>                    
+                 </div>                   
+              </div>
+             </div>
+          </div>
+
+
+    <div class="container-fluid mt-3">
         <div class="row">
 
-          <div class=" col-xs-12 col-sm-12 col-lg-6 col-md-6">
-             <div class="card">
+          <div class=" col-xs-12 col-sm-12 col-lg-6 col-md-6 ">
+             <div class="card border-0">
               <div class="card-body theme-secondary text-center">
 
-                <h2 class="card-title text-center "> Main Skills</h2>
+                <h3 class="card-title text-center "> Main</h3>
                    <hr class="col-2">
 
-                <div class="media-body pb-3 mb-0 small border-bottom border-gray text-weak">
-                    <br><h6> Programming Languages:   </h6>
+                <div class="media-body pb-3 mb-0 small  text-weak">
+                    <br><h6> </h6>
                     <span class="d-block"> 
-                      <% [" Ruby , Java "].each do |skill|%>
+                      <h3>
+                      <% [" Ruby , Java , JavaScript"].each do |skill|%>
                         <%= skill%>
                       <% end %> 
+                    </h3>
                     </span>                    
                  </div> 
 
-                 <div class="media-body pb-3 mb-0 small border-bottom border-gray text-weak">
-                    <br><h6> Focus: </h6>
-                    <span class="d-block">   
-                      <% [" Web Development "," Computer Networks ", "Object Oriented Analysis"].each do |skill|%>                      
-                        <%= skill%><br>
-                      <% end %> 
-                    </span>                    
-                 </div> 
-
-                  <div class="media-body pb-3 mb-0 small border-bottom border-gray text-weak">
-                    <br><h6> Other Tools OS/Frameworks: </h6>
+     
+                  <div class="media-body pb-3 mb-0 small border-gray text-weak">
+                    <br><h6> </h6>
                     <span class="d-block">
-                       <% ["JavaScript","Rails", "nodeJS , Express , Electron , React","Bash script Unix", "BootStrap HTML / CSS" ].each do |skill|%>
+                      <h3>
+                       <% ["NodeJS  Express ", " Electron  React", "BootStrap HTML / CSS" ].each do |skill|%>
+                          <%= skill%> <br><br>
+                       <% end %>
+                     </h3>
+                    </span>                    
+                  </div> 
+
+
+                  <div class="media-body pb-3 mb-0 small  border-gray text-weak">
+                    <br><h6> </h6>
+                    <span class="d-block">
+                      <h3>
+                       <% ["Bash , Unix"].each do |skill|%>
                           <%= skill%> <br>
                        <% end %>
+                     </h3>
                     </span>                    
                   </div> 
                    
@@ -214,48 +297,73 @@
              </div>
           </div>
 
-          <div class=" col-xs-12 col-sm-12 col-lg-6 col-md-6">
-             <div class="card">
+          <div class=" col-xs-12 col-sm-12 col-lg-6 col-md-6 ">
+             <div class="card border-0">
               <div class="card-body theme-secondary text-center">
 
-                <h2 class="card-title text-center "> Other Skills</h2>
+                <h3 class="card-title "> Other </h3>
                    <hr class="col-2">
 
        
-                <div class="media-body pb-3 mb-0 small border-bottom border-gray text-weak">
-                    <br><h6> Other Programming Languages:   </h6>
+                <div class="media-body pb-3 mb-0 small border-gray text-weak">
+                    <br><h5 class="text-weak">   </h5>
                     <span class="d-block"> 
-                      <% [" C++ , C" ,"Python3"].each do |skill|%>
+                      <h4>
+                      <% [" C++ , C , Python3"].each do |skill|%>
                         <%= skill%><br>
                       <% end %> 
+                    </h4>
                     </span>                    
                  </div> 
     
-                 <div class="media-body pb-3 mb-0 small border-bottom border-gray text-weak">
-                    <br><h6> Databases: </h6>
+                 <div class="media-body pb-3 mb-0 small text-weak">
+                    <br><h6></h6>
                     <span class="d-block">   
+                      <h4>
                       <% [" MySQL , MongoDB , Sqlite3 "].each do |skill|%>
                         <%= skill%>
                       <% end %> 
+                    </h4>
                     </span>                    
                  </div> 
 
-                  <div class="media-body pb-3 mb-0 small border-bottom border-gray text-weak">
-                    <br><h6> Other Tools/Frameworks: </h6>
+                 <div class="media-body pb-3 mb-0 small  border-gray text-weak">
+                    <br><h6> </h6>
                     <span class="d-block">
-                       <% ["Mongoose ODM, Sequelize ORM" ,"AWS Basics, Heroku ", "Linux","Windows Server2012, GFI, VmWare ESXi"].each do |skill|%>
+                      <h4>
+                       <% ["Mongoose , Sequelize"].each do |skill|%>
                           <%= skill%><br>
                        <% end %>
+                     </h4>
                     </span>                    
                   </div> 
-        
+
+
+                 <div class="media-body pb-3 mb-0 small  border-gray text-weak">
+                    <br><h6> </h6>
+                    <span class="d-block">
+                      <h4>
+                       <% ["Linux", " GFI Software , Windows Active Directory","Windows Server2012, VmWare ESXi"].each do |skill|%>
+                          <%= skill%><br><br>
+                       <% end %>
+                     </h4>
+                    </span>                    
+                  </div> 
+
+
+            
               </div>
              </div>
           </div>
         </div>
       </div>
 
+
+
 <%= render 'border_chunk' %>
+
+
+
 
   <div id="profileSection" class="container mt-4">
     <div id="profileSection" class="row">
@@ -263,7 +371,7 @@
       <div class="col">
 
         <div class="section-heading text-center">
-              <h2 class="h-bold theme-strong-secondary">Other Profiles</h2>
+              <h2 class="h-bold theme-strong-secondary">Contact & Profiles</h2>
               <div class="divider-header"></div>
             </div>
       </div>
@@ -276,58 +384,62 @@
    <div class="container text-center">
     <div class="row">
 
-      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+      <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
         <div class="card" >
           <div class="card-body theme-secondary">
             <%= image_tag 'code-signal-icon.jpg', :class=>" card-icon  img-responsive"%>
             <h5 class="card-title">CodeFights</h5>
 
-            <p class="card-text text-weak">
-             Check out my coding style!
-            </p>
-
-            <a href="https://app.codesignal.com/profile/masterbaggins" target="_blank" class="card-link">CodeFights</a>
+            <a href="https://app.codesignal.com/profile/masterbaggins" target="_blank" class="card-link">Learn more</a>
           </div>  
          </div>
       </div>
 
-      <div class="col-lg-4 col-md-4 col-sm-12  col-xs-12">
+
+      <div class="col-lg-3 col-md-3 col-sm-12  col-xs-12">
         <div class="card" >
   <div class="card-body theme-secondary">
    
      <%= image_tag 'github-icon.svg', :class=>" card-icon "%>
     <h5 class="card-title">Github</h5>
- 
-     <p class="card-text text-weak">
-      Check out my coding style!
-    </p>
+      
 
-
-    <a href="https://github.com/GandalfGrey123" target="_blank" class="card-link ">Github</a>
+    <a href="https://github.com/GandalfGrey123" target="_blank" class="card-link ">Learn more</a>
   </div>
 </div>
       </div>
 
-      <div class="col-lg-4 col-md-4 col-sm-12  col-xs-12">
+
+          <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+        <div class="card" >
+          <div class="card-body theme-secondary">
+            <%= image_tag 'Social_Media_Socialmedia_network_share_socialnetwork_network-05-512.png', :class=>" card-icon  img-responsive"%>
+            <h5 class="card-title">LinkedIn</h5>
+
+            <a href="https://www.linkedin.com/in/career-marcus" target="_blank" class="card-link">Learn more</a>
+          </div>  
+         </div>
+      </div>
+
+      <div class="col-lg-3 col-md-3 col-sm-12  col-xs-12">
         <div class="card ">
   <div class="card-body theme-secondary">
      <%= image_tag 'https://image.flaticon.com/icons/svg/179/179319.svg', :class=>" card-icon"%>
     <h5 class="card-title ">Facebook</h5>
  
-   
-     <p class="card-text text-weak">
-      Check out my ... style!
-    </p>
-
-    <a href="https://www.facebook.com/select.all.sf" target="_blank" class="card-link"> Facebook</a>
+    <a href="https://www.facebook.com/select.all.sf" target="_blank" class="card-link"> Learn more</a>
   </div>
 </div>
       </div>
 
     </div>
+
+
+<br>
+<br>
+<br>
   </div>
 
-<%= render 'border_chunk' %>
 
   
       <div id="contactSection" class="container">
@@ -355,16 +467,34 @@
       <nav class="container-fluid p-5 mt-5">
       <ul class="nav justify-content-end">
         <li class="nav-item">
-          <a class="nav-link active" href="#">About Website</a>
+          <a class="nav-link active" href="/homepage/about">About Website</a>
         </li>
 
+
+        
         <li class="nav-item">
-          <a class="nav-link disabled" href="#">version 1.0</a>
+          <a class="nav-link disabled" href="#">version 1.1</a>
         </li>
       </ul>   
     </nav>
+
+
+
+
    </body>
 
+<%= javascript_include_tag('github.js') %>
+
+<link
+  rel="stylesheet"
+  href="https://cdn.rawgit.com/IonicaBizau/github-calendar/gh-pages/dist/github-calendar.css"
+/>
+
+
+
+<script>
+    new GitHubCalendar(".calendar", "GandalfGrey123");
+</script>
   <% if(@email_error.length != 0) %>
     <script>
       alert('Message not sent!');
@@ -411,6 +541,8 @@
 
     var buttonContact = document.getElementById("buttonContact");
     buttonContact.addEventListener("click",() =>{
+
+ 
       document.getElementById(activeNavButton).classList.remove('active');
        activeNavButton = "buttonContact";
        buttonContact.classList.add('active'); 
@@ -423,6 +555,7 @@
         });
 
     });
+
 
    </script>
 </html>

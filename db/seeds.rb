@@ -33,38 +33,36 @@ def run_seed
  	create_project([
  		true,
  		"Apartment Rental Website - 2019",		
-		"Fullstack nodeJS Express and React app. Website for finding local apartments with registration and easy contacting system.",
-		"Summary: \nWeb app designed for college students in need of housing. We created this web app to make it easy the process of renting an apartment very simple and quick. \nTools / FrameWorks: \nThis is a fullstack nodeJS application that was deployed to an AWS ec2 instance. For our back end framework and tools we used Express with MySQL and the Sequelize ORM to implement data mapping design. For our front end code we used ReactJs with Google's React library, Material UI. \nMy Contribution: \nDuring this project I acted as one of the main Github masters and did pull request review. My main role in this project was working as a backend and frontend coder. The main contributions that I made to this app was the direct chat messaging system, new listing page and login with authentication",
+		"Fullstack nodeJS Express and React app",
+		"Summary: \nWeb app designed for college students in need of housing. We created this web app to make the process of finding and renting an apartment quick and simple. Contacting landlords is very fast with the Gator Room's direct messaging system. \nTools / FrameWorks: \nThis is a fullstack nodeJS application that was deployed to an AWS ec2 instance. For our back end framework and tools we used Express with MySQL and the Sequelize ORM to implement a data mapping design. For our front end code we used ReactJs with Google's React Material UI library. \nMy Contribution: \nDuring this project I acted as one of the main Github masters and did pull request review. My main role in this project was working as a backend and frontend coder. The main contributions that I made to this app was the direct chat messaging system, new listing page and login with authentication",
  		[ 
  		  ["https://github.com/GandalfGrey123/project-apartment-rental","Github repo - GatorRooms"],
 		  ["https://youtu.be/-Esn45J1gIM","Youtube page - GatorRooms Demo"],
 		  ["https://github.com/GandalfGrey123/project-apartment-rental/blob/master/Milestones/M5/csc648doc.pdf","Project Documentation"]
 		],
 		[
-		  "apartment1.png",
-		  "apartment2.png",
+
 		]
 	])
 
  	create_project([
  		true,
  		"PyChat Room - 2019",  	
- 		"A command line chat room program written in Python3",
+ 		"A command line chat room program created with Python3",
  		"Dev Notes: \n This was a quick 2 week school project for my Computer Networks class, which was suppose to show basic TCP connections and data transfer. As an extra feature I implemented asynchronous IO. I also used subprocessing to host and handle multiple chat rooms. Additionally this was my first Python program. \n Summary: \n Users can connect to their friends and chat simply through their devices' command line interface. Users will able to create their own chat rooms as well as join others. The goal was to connect multiple users at the same time through chat rooms. \n Tools: \n \tAll connections made to the server were handled using TCP sockets and client requests were monitored using the Python select module.",
  		[ 
  		  ["https://github.com/GandalfGrey123/py-chat-room","Github repo - PyChat Program"],
 		  ["https://www.youtube.com/watch?v=sMmpfk4xrHU","Youtube page - PyChat Video Demo"],
 		],
 		[
-		  "chat1.png",
-		  "chat3.png"
+
 		]
  	])
 
  	create_project([
  		true,
  		"Java Compiler - Spring 2016",  	
- 		"Java compiler and JVM clone with simple debug mode option, implemented using Java.",
+ 		"Java compiler and JVM clone with simple debug mode option created with Java",
  		"Summary: \nFully functional compiler for a simple source code language we named X. The compiler can be ran in the command line given a target source file path with command options for debug mode. \nDesign Patterns: \nThis project design leveraged many OOP design patterns to simplfy code and have organized development. \n Interpreter - For the interpreter we simply built a set of ByteCode classes by extending an abstract ByteCode class with an execute method. A runtime stack was used to handle the byte code execution which were loaded into the VM using Java reflection. \n AST - We combined double dispatch with the visitor design pattern to build and validate the Abstract Syntax Tree using predefined grammar rules for our made up language named 'X'. \nContributions: \nMy part of this project was to define new syntax rules for the compiler and implement the bytecode loader, source code tokenizer and the interpreter with a debug mode option",
 
  		[ 
