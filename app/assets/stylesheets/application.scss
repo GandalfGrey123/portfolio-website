@@ -1,7 +1,22 @@
 @import 'bootstrap';
 
 .modal-header{
-  font-family:  Arial, Helvetica, sans-serif;
+  font-family:  Arial, Helvetica, sans-serif;  
+}
+
+
+.project-link{
+  font-size: 20px;  
+}
+
+.icon-size{
+  height:64px;
+  width:64px;
+}
+
+.modal-body-width{
+  float:center;
+  width: 80%;
 }
 
 .w-20{
@@ -37,16 +52,28 @@
   }
 }
 
+.modal-header {
+    border-bottom: 0 none;
+}
+.modal-lg {
+    max-width: 85% !important;
+}
+
+.modal-title h1{
+  font-weight: 20 !important;
+}
+
 .project-modal{
-  background-color: rgba(242, 242, 242, 0.9);
+  background-color: white;
+  background-color: rgba(255, 255, 255, 0.4) !important;
 }
 
 .modal-bg-custom{
-   background-color: rgba(255, 255, 255, 0.8) !important; 
+   background-color: rgba(255, 255, 255, 0.90) !important; 
 }
 
-.f-weight-thin h2{
-  font-weight: 10;
+.f-weight-thin {
+  font-weight: 20px !important;
 }
 
 .badge{
@@ -61,7 +88,7 @@
   font-weight: 10;
 }
 
-body a,h1,h2,h3,h4{
+body a,h1,h2,h3,h4, h5 , h6{
   font-weight: 20;
 }
 
@@ -71,7 +98,7 @@ body a,h1,h2,h3,h4{
 
 .modal{    
   width:1680px;
-  max-width:75%;
+  max-width:100%;
 }
 
 .bg-theme{
@@ -127,7 +154,6 @@ body a,h1,h2,h3,h4{
   height: 150px;
   border-radius: 50%;
 }
-
 
 .navbar-nav > li {
   float: left;
