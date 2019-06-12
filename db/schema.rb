@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_24_211134) do
+ActiveRecord::Schema.define(version: 2019_06_12_055057) do
+
+  create_table "contributors", force: :cascade do |t|
+    t.string "contributorName"
+    t.string "contributorProfileLink"
+    t.integer "project_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["project_id"], name: "index_contributors_on_project_id"
+  end
 
   create_table "links", force: :cascade do |t|
     t.string "linkUrl"
@@ -47,6 +56,16 @@ ActiveRecord::Schema.define(version: 2019_05_24_211134) do
     t.text "designSummary"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "tags", force: :cascade do |t|
+    t.string "tagName"
+    t.string "resourceLink"
+    t.string "resourceImage"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "project_id"
+    t.index ["project_id"], name: "index_tags_on_project_id"
   end
 
 end
