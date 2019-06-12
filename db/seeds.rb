@@ -20,21 +20,51 @@ def create_project args
   	)
   end
 
+  args[6].each do |next_tech|
+  	project.tags.create!(
+  		:tagName => next_tech[0],
+  		:resourceLink => next_tech[1],
+  		:resourceImage => next_tech[2],
+  	)
+  end
+
+
+ args[7].each do |next_tech|
+  	project.contributors.create!(
+  		:contributorName => next_tech[0],
+  		:contributorProfileLink => next_tech[1],
+  	)
+
+  end
+
 end
 
 
 
 def run_seed 
 	Link.delete_all
- 	Project.delete_all
- 	Picture.delete_all
+	Contributor.delete_all
+	Tag.delete_all
+	Picture.delete_all
+ 	Project.delete_all 	
  	Message.delete_all
+
+
 
  	create_project([
  		true,
  		"Apartment Rental Website - 2019",		
 		"Fullstack nodeJS Express and React app",
-		"Summary: \nWeb app designed for college students in need of housing. We created this web app to make the process of finding and renting an apartment quick and simple. Contacting landlords is very fast with the Gator Room's direct messaging system. \nTools / FrameWorks: \nThis is a fullstack nodeJS application that was deployed to an AWS ec2 instance. For our back end framework and tools we used Express with MySQL and the Sequelize ORM to implement a data mapping design. For our front end code we used ReactJs with Google's React Material UI library. \nMy Contribution: \nDuring this project I acted as one of the main Github masters and did pull request review. My main role in this project was working as a backend and frontend coder. The main contributions that I made to this app was the direct chat messaging system, new listing page and login with authentication",
+		"
+		 I worked as a Fullstack team lead to develop the apartment rental website GatorRooms. 
+		 This website was developed to aid SFSU students during the school semester in finding affordable housing.
+		 This application was deployed to a EC2 AWS Linux server configured to run NodeJS and MySQL applications
+		 We setup a relational database with MySQL to represent our website data sets. 
+		 Users were able to signup, access their dashboard and create apartment listing posts on our website.
+		 The website has a direct chat messaging system that quickly connects student users to the landlord for individual apartment listings.
+		 The user dashboard can be used to display all listings made by a user and all messages made to a landlord.
+		 ReactJS was used as our frontend framework because it's simple single page architecture made our simple project code highly maintainable.		 
+		 ",
  		[ 
  		  ["https://github.com/GandalfGrey123/project-apartment-rental","Github repo - GatorRooms"],
 		  ["https://youtu.be/-Esn45J1gIM","Youtube page - GatorRooms Demo"],
@@ -42,21 +72,58 @@ def run_seed
 		],
 		[
 
+		],
+		[
+		 ["NodeJS 10.16.0","https://nodejs.org/en/","https://cdn4.iconfinder.com/data/icons/logos-3/456/nodejs-new-pantone-black-512.png"],
+		 ["ReactJS ","https://reactjs.org","https://cdn2.iconfinder.com/data/icons/designer-skills/128/react-512.png"],
+		 ["MySQL 5.7","https://dev.mysql.com/doc/relnotes/mysql/5.7/en/",""],
+		 ["ExpressJS","https://expressjs.com",""],
+		 ["Sequelize ORM","http://docs.sequelizejs.com",""],
+		 ["Material UI","https://material-ui.com",""],
+		 ["AWS","https://aws.amazon.com",""],
+		],
+		[
+		 ["Alex Sergeev"  , "https://www.linkedin.com/in/alex-sergeev-45a045116"],
+		 [ "Inez Wibowo" , "https://github.com/inezwibs"],
+		 [ "Marcus Wong" , "https://github.com/GandalfGrey123"],
+		 [ "Hang Li" , "#"],
+		 [ "Jia Nan Mai" , "#"],
+		 [ "Romeel Chaudhari" , "#"],
+		 [ "Ismael San Juan" , "#"],
 		]
 	])
 
  	create_project([
  		true,
  		"PyChat Room - 2019",  	
- 		"A command line chat room program created with Python3",
- 		"Dev Notes: \n This was a quick 2 week school project for my Computer Networks class, which was suppose to show basic TCP connections and data transfer. As an extra feature I implemented asynchronous IO. I also used subprocessing to host and handle multiple chat rooms. Additionally this was my first Python program. \n Summary: \n Users can connect to their friends and chat simply through their devices' command line interface. Users will able to create their own chat rooms as well as join others. The goal was to connect multiple users at the same time through chat rooms. \n Tools: \n \tAll connections made to the server were handled using TCP sockets and client requests were monitored using the Python select module.",
+ 		"A command line web chat interface created with Python3",
+ 		" 
+ 		 I created a web chat program that you can simply use with your devices' command line interface. 
+ 		 This was a two week quick school project that I turned into my own personal project. 
+ 		 This program simply uses Python3 only and installation only requires installing Python3.
+ 		 From your computer terminal you can connect to the chat server and begin creating chat rooms with other user and sending inbox messages.
+ 		 The chat server implments asynchronous IO using the Python3 select module on the socket connections.
+ 		 Python3's select module is compatiable with most operating systems such as Unix, Linux 2.5+ and even Windows for socket IO streams.
+ 		 Subprocessing was an essential utility in the backend server and was used to implement simultaneous chat rooms with multiple users.
+ 		",
  		[ 
  		  ["https://github.com/GandalfGrey123/py-chat-room","Github repo - PyChat Program"],
 		  ["https://www.youtube.com/watch?v=sMmpfk4xrHU","Youtube page - PyChat Video Demo"],
 		],
-		[
 
-		]
+		[
+		  
+		],
+		[
+		  ["Python3","https://docs.python.org/3/",""],
+		  ["socket module","https://docs.python.org/3/library/socket.html",""],
+		  ["select module","https://docs.python.org/3/library/select.html",""],
+		  ["subprocess module","https://docs.python.org/3/library/subprocess.html",""],		  		  
+		],
+		[
+		 [ "Marcus Wong" , "https://github.com/GandalfGrey123"],
+		],
+
  	])
 
  	create_project([
@@ -70,8 +137,55 @@ def run_seed
 		],
 		[
 		  
+		],
+		[
+		  
+		],
+		[
+		  
 		]
  	])
+
+
+	create_project([
+		false,
+ 		"SF Artist Event Mapper",		
+		"Full stack nodeJs Electron with React app. Website for coordinating grocery and meal plans",
+		"Summary: \nDesktop application built with Github's ElectronJS framework. This application was designed to help organize meal planning coordinating with your grocery shopping lists. Use the app to create shopping lists and strategies for daily or weekly meal plans that you can reuse over and over. This application will also help remember the previous recipes you've enjoyed so you wont have such a hard time thinking of what to make for dinner or lunch. \n Framework: \n Backend frameworks include ExpressJS and MongoDB with the Mongoose ODM to implement data mapping. Frontend tools include ElectronJS with BootStrap 5.0",
+ 		[ 
+ 		  ["https://electronjs.org","ElectronJS Docs"],
+ 		  ["https://github.com/GandalfGrey123/grocery-guy","Github repo - Grocery Guy"],		  
+		],
+		[
+		  
+		],
+		[
+		  
+		],
+		[
+		  
+		]
+	])
+
+
+	create_project([
+		false,
+		"Big Data Project",
+		"Web app that utilizes the Socrata Open Data API to provide powerful services to client that help with everyday activities",
+		"Project Overview: \nDownload this app to effortless avoid street cleaning parking tickets at any arbitrary location in San Francisco. User devices will have direct access to the powerful resources provided by the Socrata Open Data API. Along with the HTML Geolocation API along the app will provide useful services like detecting street cleaning ticket risk based on current location. \nIntended Design/Tools: \nNodeJS \nBuild REST API with ExpressJS \nHTML5 Geolocation 5 \nSocrata Open Data API",
+ 		[  
+		  ["https://dev.socrata.com/data/","Socrata Dev API"],
+		],
+		[
+		  
+		],
+		[
+		  
+		],
+		[
+		  
+		]
+	])
 
 
 	create_project([
@@ -85,21 +199,15 @@ def run_seed
 		],
 		[
 		  
-		]
-	])
-
-	create_project([
-		false,
-		"Big Data Project",
-		"Web app that utilizes the Socrata Open Data API to provide powerful services to client that help with everyday activities",
-		"Project Overview: \nDownload this app to effortless avoid street cleaning parking tickets at any arbitrary location in San Francisco. User devices will have direct access to the powerful resources provided by the Socrata Open Data API. Along with the HTML Geolocation API along the app will provide useful services like detecting street cleaning ticket risk based on current location. \nIntended Design/Tools: \nNodeJS \nBuild REST API with ExpressJS \nHTML5 Geolocation 5 \nSocrata Open Data API",
- 		[  
-		  ["https://dev.socrata.com/data/","Socrata Dev API"],
+		],
+		[
+		  
 		],
 		[
 		  
 		]
 	])
+
   
 end
 
