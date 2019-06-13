@@ -10,16 +10,15 @@
         <div class="row">
           <div class="col">
             <div class="jumbotron jumbotron-fluid bg-light text-center">
-              <div class="container">
-              
+
+              <div class="container">              
                     <%= image_tag "avatar-me.png", :class=>"hover-shadow avatar mr-3" %>
                     <div class="mt-4">
                     <h2 class="display-4 f-weight-thin">Marcus &nbsp; Wong</h2>
                     S o f t w a r e &nbsp; E n g i n e e r 
                     </div>
               </div>
-                        
-                
+                                        
               <br><br><br><br>
                <ul class="nav justify-content-end">        
                 <li class="nav-item">
@@ -70,9 +69,9 @@
                 <div class="media-body p-4 mb-0 small  border-gray text-weak">
                     <br>
                     <span class="d-block"> 
-                      <h2>
+                      <h1>
                         Software Projects
-                      </h2>
+                      </h1>
                     </span>                    
                  </div>                   
               </div>
@@ -85,7 +84,7 @@
      
              <div class="my-3 p-3 rounded shadow-sm">
               <div class="border-bottom border-gray">
-                <h3 class="pt-4 pb-4 mb-0">Completed Projects </h3>
+                <h2 class="pt-4 pb-4 mb-0">Completed Projects </h2>
                 <small>
                   2016 - Current
                 </small>             
@@ -94,7 +93,7 @@
                   <% @completed_projects.each do |project| %>
               
                       <div class="media text-muted pt-3">
-                        <%= image_tag "source-code.svg", :class=>"mr-3 table-icon"%>
+                        <%= image_tag "source-code.svg", :class=>"mr-3 fs-20 table-icon"%>
                         <%= render :partial => 'project_row', :locals =>{project: project} %>          
                       </div>
                   <% end %>                  
@@ -104,15 +103,15 @@
     
 
     <i class="fa fa-angle-right mr-3 table-icon"></i>
-  <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+  <div class="media-body pb-3 mb-0 small lh-125 ">
 
     <div class="" id="headingCompleted">
 
       <div class="d-flex justify-content-between align-items-center w-100">
           <strong class="d-block text-gray-dark"> 
 
-             <button class="hover-shadow btn btn-linkcollapsed" data-toggle="collapse" data-target="#collapseMoreCompleted" aria-expanded="false" aria-controls="collapseMoreCompleted">
-           More projects
+             <button class="btn btn-outline-secondary hover-shadow btn-linkcollapsed" data-toggle="collapse" data-target="#collapseMoreCompleted" aria-expanded="false" aria-controls="collapseMoreCompleted">
+           More projects .. 
         </button>
           </strong>                        
         </div>
@@ -157,15 +156,15 @@
     
 
     <i class="fa fa-angle-right mr-3 table-icon"></i>
-  <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+  <div class="media-body pb-3 mb-0 small lh-125">
 
     <div class="" id="headingCurrent">
 
       <div class="d-flex justify-content-between align-items-center w-100">
           <strong class="d-block text-gray-dark"> 
 
-             <button class="hover-shadow btn btn-linkcollapsed" data-toggle="collapse" data-target="#collapseMoreCurrent" aria-expanded="false" aria-controls="collapseMoreCurrent">
-           More projects
+             <button class="btn btn-outline-secondary hover-shadow btn-linkcollapsed" data-toggle="collapse" data-target="#collapseMoreCurrent" aria-expanded="false" aria-controls="collapseMoreCurrent">
+           More projects ...
         </button>
           </strong>                        
         </div>
@@ -196,10 +195,10 @@
               <div class="media-body p-4 mb-0 small  text-weak">
                     <br><h6> </h6>
                     <span class="d-block"> 
-                      <h3>
+                      <h1>
                                           
                      Github Activity
-                    </h3>
+                    </h1>
                     </span>                    
                  </div>                   
               </div>
@@ -210,7 +209,9 @@
 
         <div class="calendar">
             <!-- Loading stuff -->
+            <h3>
             Loading Github Data ..
+           </h3>
         </div>
       </div>
 
@@ -257,9 +258,9 @@
 
                 <h3 class="card-title text-center "> Main</h3>
                    <hr class="col-2">
-
+                   <div class="card">
                 <div class="media-body pb-3 mb-0 small  text-weak">
-                    <br><h6> </h6>
+                    <br><h5> Languages:</h5>
                     <span class="d-block"> 
                       <h3>
                       <% [" Ruby , Java , JavaScript"].each do |skill|%>
@@ -271,10 +272,10 @@
 
      
                   <div class="media-body pb-3 mb-0 small border-gray text-weak">
-                    <br><h6> </h6>
+                    <br><h5> Tools / Frameworks:</h5>
                     <span class="d-block">
                       <h3>
-                       <% ["NodeJS  Express ", " Electron  React", "BootStrap HTML / CSS" ].each do |skill|%>
+                       <% ["NodeJS , ExpressJS ", " ElectronJS , ReactJS", "BootStrap 4 , HTML5 / CSS"  ].each do |skill|%>
                           <%= skill%> <br><br>
                        <% end %>
                      </h3>
@@ -282,17 +283,17 @@
                   </div> 
 
 
-                  <div class="media-body pb-3 mb-0 small  border-gray text-weak">
-                    <br><h6> </h6>
+                  <div class="media-body pb-3 mb-0 small  border-gray ">
+                    <br><h5> Operating Systems:</h5>
                     <span class="d-block">
                       <h3>
-                       <% ["Bash , Unix"].each do |skill|%>
+                       <% [ "Bash , Unix"].each do |skill|%>
                           <%= skill%> <br>
                        <% end %>
                      </h3>
                     </span>                    
                   </div> 
-                   
+                   </div>
               </div>
              </div>
           </div>
@@ -304,52 +305,52 @@
                 <h3 class="card-title "> Other </h3>
                    <hr class="col-2">
 
-       
+                <div class="card">
                 <div class="media-body pb-3 mb-0 small border-gray text-weak">
-                    <br><h5 class="text-weak">   </h5>
+                    <br><h5> Languages:</h5>
                     <span class="d-block"> 
-                      <h4>
-                      <% [" C++ , C , Python3"].each do |skill|%>
+                      <h3>
+                      <% ["Python3 , C++ , C "].each do |skill|%>
                         <%= skill%><br>
                       <% end %> 
-                    </h4>
+                    </h3>
                     </span>                    
                  </div> 
     
                  <div class="media-body pb-3 mb-0 small text-weak">
-                    <br><h6></h6>
+                   <br><h5> Databases:</h5>
                     <span class="d-block">   
-                      <h4>
+                      <h3>
                       <% [" MySQL , MongoDB , Sqlite3 "].each do |skill|%>
                         <%= skill%>
                       <% end %> 
-                    </h4>
+                    </h3>
                     </span>                    
                  </div> 
 
                  <div class="media-body pb-3 mb-0 small  border-gray text-weak">
-                    <br><h6> </h6>
+                    <br><h5> Tools:</h5>
                     <span class="d-block">
-                      <h4>
+                      <h3>
                        <% ["Mongoose , Sequelize"].each do |skill|%>
                           <%= skill%><br>
                        <% end %>
-                     </h4>
+                     </h3>
                     </span>                    
                   </div> 
 
 
                  <div class="media-body pb-3 mb-0 small  border-gray text-weak">
-                    <br><h6> </h6>
+                     <br><h5> Operating Systems / IT:</h5>
                     <span class="d-block">
-                      <h4>
+                      <h3>
                        <% ["Linux", " GFI Software , Windows Active Directory","Windows Server2012, VmWare ESXi"].each do |skill|%>
                           <%= skill%><br><br>
                        <% end %>
-                     </h4>
+                     </h3>
                     </span>                    
                   </div> 
-
+                </div>
 
             
               </div>
