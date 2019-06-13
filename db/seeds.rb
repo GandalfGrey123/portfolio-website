@@ -129,20 +129,33 @@ def run_seed
  	create_project([
  		true,
  		"Java Compiler - Spring 2016",  	
- 		"Java compiler and JVM clone with simple debug mode option created with Java",
- 		"Summary: \nFully functional compiler for a simple source code language we named X. The compiler can be ran in the command line given a target source file path with command options for debug mode. \nDesign Patterns: \nThis project design leveraged many OOP design patterns to simplfy code and have organized development. \n Interpreter - For the interpreter we simply built a set of ByteCode classes by extending an abstract ByteCode class with an execute method. A runtime stack was used to handle the byte code execution which were loaded into the VM using Java reflection. \n AST - We combined double dispatch with the visitor design pattern to build and validate the Abstract Syntax Tree using predefined grammar rules for our made up language named 'X'. \nContributions: \nMy part of this project was to define new syntax rules for the compiler and implement the bytecode loader, source code tokenizer and the interpreter with a debug mode option",
+ 		"Java compiler and JVM clone with simple debug mode option, implemented with Java",
+ 		"
+ 		 A fully functional Java code compiler and JVM clone implemented with Java. 
+ 		 This compiler compiles source code from our basic programming language called X.
+ 		 I contributed to this project by implement new syntax and grammar rules for the language. 
+ 		 I developed the virtual machine and interpreter, the byte code executed by the interpreter.
+ 		 Our X programming language featured standard data types, function and conditional block code, standard operators and also debugging mode with stepping function. 		 
+ 		",
 
  		[ 
  		  ["https://github.com/GandalfGrey123/compiler","Github repo - Java Compiler"],		  
+ 		  ["https://github.com/GandalfGrey123/compiler/blob/master/CourseReader413.pdf","Documentation - Program Design "],		  
 		],
+
 		[
-		  
+
 		],
+
 		[
-		  
+		  ["Java 7.0","https://www.java.com/en/download/faq/release_dates.xml",""],
+		  ["Java Swing","https://docs.oracle.com/javase/7/docs/api/javax/swing/package-summary.html",""],
+		  ["Netbeans IDE","https://netbeans.org",""],
 		],
+
 		[
-		  
+		  [ "Marcus Wong","https://github.com/GandalfGrey123"],
+		  [ "Dr. Barry Levine","http://unixlab.sfsu.edu/~levine/"],		  
 		]
  	])
 
@@ -150,20 +163,31 @@ def run_seed
 	create_project([
 		false,
  		"SF Artist Event Mapper",		
-		"Full stack nodeJs Electron with React app. Website for coordinating grocery and meal plans",
-		"Summary: \nDesktop application built with Github's ElectronJS framework. This application was designed to help organize meal planning coordinating with your grocery shopping lists. Use the app to create shopping lists and strategies for daily or weekly meal plans that you can reuse over and over. This application will also help remember the previous recipes you've enjoyed so you wont have such a hard time thinking of what to make for dinner or lunch. \n Framework: \n Backend frameworks include ExpressJS and MongoDB with the Mongoose ODM to implement data mapping. Frontend tools include ElectronJS with BootStrap 5.0",
- 		[ 
- 		  ["https://electronjs.org","ElectronJS Docs"],
- 		  ["https://github.com/GandalfGrey123/grocery-guy","Github repo - Grocery Guy"],		  
+		"Website for local San Francisco Art events",
+		"
+		 I am currently working on a website to connect San Francisco artists to local art events. 
+		 Using the website map provided by the Google Maps API, artist will be able to easily and quickly find upcoming and current art events in San Francisco or based on their location.
+		 I am working with local artists from the community to develop this website into a desireable web application. 
+		 A prototype will be built for this project and presented to artist users for feedback.
+		",
+
+ 		[  				 
 		],
-		[
-		  
+		
+		[],
+
+		[	
+		 ["NodeJS 10.16.0","https://nodejs.org/en/","https://cdn4.iconfinder.com/data/icons/logos-3/456/nodejs-new-pantone-black-512.png"],
+		 ["ReactJS ","https://reactjs.org","https://cdn2.iconfinder.com/data/icons/designer-skills/128/react-512.png"],
+		 ["MySQL","https://dev.mysql.com/doc/relnotes/mysql/5.7/en/",""],
+		 ["ExpressJS","https://expressjs.com",""],
+		 ["Sequelize ORM","http://docs.sequelizejs.com",""],
+		 ["React-BootStrap","https://react-bootstrap.github.io",""],			    
+		 ["Google Cloud","https://cloud.google.com",""],			    		
 		],
+
 		[
-		  
-		],
-		[
-		  
+		  ["Marcus Wong","https://github.com/GandalfGrey123"],
 		]
 	])
 
@@ -171,19 +195,29 @@ def run_seed
 	create_project([
 		false,
 		"Big Data Project",
-		"Web app that utilizes the Socrata Open Data API to provide powerful services to client that help with everyday activities",
-		"Project Overview: \nDownload this app to effortless avoid street cleaning parking tickets at any arbitrary location in San Francisco. User devices will have direct access to the powerful resources provided by the Socrata Open Data API. Along with the HTML Geolocation API along the app will provide useful services like detecting street cleaning ticket risk based on current location. \nIntended Design/Tools: \nNodeJS \nBuild REST API with ExpressJS \nHTML5 Geolocation 5 \nSocrata Open Data API",
- 		[  
-		  ["https://dev.socrata.com/data/","Socrata Dev API"],
+		"Criminal Activity Mapper",
+		"
+		Currently designing a web app using the Socrata Open Data API and Google Map Javascript API.
+		This website will be used to detect recent up to date criminal activity within a resizeable radius based on the user's location.
+		The Socrata open data API datasets include city data updated everyday which will be available in the application. 
+		Users will be able to immediately open the application and view the most current criminal city data. 
+		This project is still in early development and the intended technology stack is provided within the project Technology Stack detail list.
+		",
+
+ 		[  		  
+		],
+		[		  
+		],
+		
+		[ 
+		  ["NodeJS 10.16.0","https://nodejs.org/en/",""],
+		  ["Socrata Dev API","https://dev.socrata.com/data/"],
+		  ["Google Maps API","https://developers.google.com/maps/documentation/"],
+		  ["in progress..","#"]
+
 		],
 		[
-		  
-		],
-		[
-		  
-		],
-		[
-		  
+		  ["Marcus Wong","https://github.com/GandalfGrey123"],
 		]
 	])
 
@@ -191,20 +225,26 @@ def run_seed
 	create_project([
 		false,
  		"Electron Grocery App",		
-		"Full stack nodeJs Electron with React app. Website for coordinating grocery and meal plans",
-		"Summary: \nDesktop application built with Github's ElectronJS framework. This application was designed to help organize meal planning coordinating with your grocery shopping lists. Use the app to create shopping lists and strategies for daily or weekly meal plans that you can reuse over and over. This application will also help remember the previous recipes you've enjoyed so you wont have such a hard time thinking of what to make for dinner or lunch. \n Framework: \n Backend frameworks include ExpressJS and MongoDB with the Mongoose ODM to implement data mapping. Frontend tools include ElectronJS with BootStrap 5.0",
+		"Full stack NodeJS app using ElectronJS with ReactJS. Website for coordinating grocery lists and meal plans",
+		"I started this application as a personal desktop application. 
+		 I am creating this application to support organized grocery shopping and to build resuseable archived recipes.
+		 ",
  		[ 
- 		  ["https://electronjs.org","ElectronJS Docs"],
  		  ["https://github.com/GandalfGrey123/grocery-guy","Github repo - Grocery Guy"],		  
 		],
-		[
-		  
+		[],
+
+		[ 
+		  ["NodeJS 10.16.0","https://nodejs.org/en/",""],
+		  ["ExpressJS","https://expressjs.com",""],
+		  ["MongoDB","https://www.mongodb.com",""],
+		  ["Mongoose 5.5 ODM","https://mongoosejs.com",""],
+		  ["ElectronJS","https://electronjs.org",""],
+		  ["ReactJS","https://reactjs.org",""],
+		  ["React-BootStrap","https://react-bootstrap.github.io",""],  
 		],
 		[
-		  
-		],
-		[
-		  
+		  ["Marcus Wong","https://github.com/GandalfGrey123"],
 		]
 	])
 
